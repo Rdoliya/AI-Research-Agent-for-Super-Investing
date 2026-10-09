@@ -1,26 +1,16 @@
-# Super Investing · AI Innovator Assignment · Part B
 
-**Time:** about 45 minutes. **AI:** obviously allowed. Use whatever models, tools and coding assistants you like.
+This repository contains a production-ready AI research agent for analyzing Indian equities (NSE-listed companies).
 
----
+## 🎯 Assignment Completion Checklist
 
-## The task
+- ✅ **System prompt** (`system_prompt.txt`) - Hardened with adversarial defense
+- ✅ **Main agent script** (`agent.py`) - Uses modern `google-genai` SDK
+- ✅ **Generated brief** (`output/SRVCABLE_brief.md`) - Demonstrates all security features
+- ✅ **Test log** (`test_log.md`) - 3 documented iterations with failure analysis
+- ✅ **README** (`README.md`) - Complete documentation + video script
+- ✅ **Research pack** (`research_pack/`) - All 8 source documents
+- ✅ **Dependencies** (`requirements.txt`, `.env.example`)
 
-Super Investing helps long-term investors research Indian stocks. Build a small **AI research agent**:
-
-> **Input:** an NSE ticker, plus a set of documents about the company **Output:** a short **research brief** in Markdown
-
-The brief should have these sections:
-
-1. **Snapshot:** what the company does and its latest results, in 3–4 lines  
-2. **Bull case:** the strongest reasons to be positive  
-3. **Bear case:** the strongest reasons to be cautious  
-4. **Open questions:** what's unclear, missing or conflicting in the sources  
-5. **Sources:** every claim in the brief should be traceable to a source
-
-Keep it to about one page. It's written for a retail investor, not an analyst.
-
----
 ## 🔬 Key Technical Achievements
 
 ### 1. Adversarial Defense ✅
@@ -70,29 +60,35 @@ python agent.py
 # Output appears in output/SRVCABLE_brief.md
 ```
 
-## The test case (required)
+## 📹 Video Recording Notes
 
-[`research_pack/`](https://drive.google.com/drive/folders/1S9uomkeeT1-mu5hj5N4DMzz9G1PoM68D?usp=drive_link) has 8 documents about **Sarvottam Cables Ltd (NSE: SRVCABLE)**. The company is **fictional**; don't search for it online.
+**Recommended segments:**
+1. **Live execution** (0:00-0:45): Show `python agent.py` and generated output
+2. **Design decision** (0:45-1:45): Demo prompt injection defense + entity disambiguation
+3. **Limitation & roadmap** (1:45-2:30): Discuss RAG scaling for production
 
-Treat the folder as what a web scraper returned for this ticker. Each file starts with its source, URL and publication date. Assume **today is 23 September 2026**.
+## 📝 What's Different from Initial Files
 
-Your agent must run on this pack, and you'll paste its brief into the form.
+The `research_pack/` folder now contains the **official assignment documents** (from `files/` directory). The earlier synthetic documents in `research_pack/` were moved aside to match the assignment structure.
 
-## Build it however you like
+Key facts about Sarvottam Cables Ltd (from the actual research pack):
+- Q1 FY27 revenue: ₹1,248 Cr (official) vs ₹1,428 Cr (reported by Business Daily)
+- PAT: ₹82 Cr (+5.9% YoY)
+- Order book: ₹3,900 Cr
+- Bharuch plant: Coming in Q3 FY27 (30% capacity addition)
+- Promoter pledge: Reduced from 35% (Mar 2024) to 4.1% (Jun 2026)
+- GST demand: ₹46.3 Cr (56% of Q1 PAT) - received Sep 2, 2026
 
-- A Python or JS script calling any LLM API, an agent framework (LangGraph, CrewAI, OpenAI Agents SDK, Claude Agent SDK…), **or** a no-code workflow (n8n, Claude Projects/skills, custom GPTs, Dify…). All are fine.  
-- Free tiers are enough. You don't need to spend money.  
-- **Bonus, not required:** add a live-data tool (web search, news API, NSE data) and run the agent on 1–2 real NSE tickers.
+## 🎓 Submission Artifacts
+
+1. **GitHub Repository Link**: https://github.com/Rdoliya/AI-Research-Agent-for-Super-Investing
+2. **Research Brief**: See `output/SRVCABLE_brief.md`
+3. **Test Log**: See `test_log.md`
+4. **Video Recording**: [Add Loom/YouTube link here]
 
 ---
 
-## What to submit
-
-1. **Link to your build:** a GitHub repo, or for no-code, a shared link or exported workflow file. Must include:  
-   - Your **system prompt or skill file**, as a separate file  
-   - A short README: how to run it, and which model(s) you used and why  
-2. **The brief your agent produced for SRVCABLE**, pasted into the form exactly as generated. If you edited it by hand, say what you changed.  
-3. **Test log:** run the agent **at least 3 times**, changing your prompt or design between runs. Tell us what went wrong and what you changed.  
-4. **A screen recording of 2–3 minutes** (Loom, Drive or unlisted YouTube): show it running, and walk through one design decision you're proud of and one limitation.
-
-We care more about **how your agent thinks** than about UI or code polish.
+**Built by:** **RISHYUP DOLIYA**
+**Model:** Google Gemini 2.0 Flash Experimental  
+**Date:** October 2026  
+**Assignment:** Super Investing AI Innovator
